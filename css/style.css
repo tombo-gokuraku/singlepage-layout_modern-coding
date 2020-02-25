@@ -108,3 +108,99 @@ body {
   margin: 30px 0;
   line-height: 2.5;
 }
+
+.works {
+  background-color: #383634;
+  padding: 80px 0;
+}
+
+.works-wrapper {
+  display: table;
+  width: 100%;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+
+.work-box {
+  position: relative;
+  display: table-cell;
+}
+
+.work-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.2;
+  transform: scaleY(-1);
+}
+
+.work-box.tree::after {
+  background-image: url('../images/tree.jpg');
+}
+
+.work-box.building::after {
+  background-image: url('../images/building.jpg');
+}
+
+.work-box.lake::after {
+  background-image: url('../images/lake.jpg');
+}
+
+.work-box.sky::after {
+  background-image: url('../images/sky.jpg');
+}
+
+.work-image {
+  display: block;
+  width: 100%;
+  margin: 0 0 60%;
+}
+
+.work-description {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  overflow-y: auto;
+}
+
+.work-description-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.work-text {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.work-text .button {
+  width: 60%;
+  margin-top: 20px;
+  padding: 3px;
+}
+
+.button-ghost {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.work-box:nth-child(odd) .work-image {
+  margin: 60% 0 0;
+}
+
+.work-box:nth-child(odd) .work-description,
+.work-box:nth-child(odd)::after {
+  top: 0;
+}
